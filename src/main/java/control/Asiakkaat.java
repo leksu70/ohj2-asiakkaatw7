@@ -66,7 +66,10 @@ public class Asiakkaat extends HttpServlet {
 			strJSON = new JSONObject().put("asiakkaat", asiakkaat).toString();
 		}
 				
-		response.setContentType("application/json");
+		//response.setContentType("application/json");
+		// Skandit mukaan
+		response.setContentType("application/json; charset=UTF-8");
+		//response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println(strJSON);
 	}
